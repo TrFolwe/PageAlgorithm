@@ -1,0 +1,75 @@
+<style>
+    .yt-card {
+        position: relative;
+        width: 350px;
+        height: 250px;
+        color: white;
+        display: inline-block;
+        margin: 25px;
+        cursor: pointer;
+        transition: all;
+        opacity: 0;
+    }
+
+    .yt-card * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .yt-card .video-content {
+        margin: 5px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .yt-card .channel-info {
+        margin: 5px 0;
+    }
+
+    .yt-card img {
+        object-fit: cover;
+    }
+
+    .yt-card:hover {
+        transform: scale(1.2);
+    }
+</style>
+
+<div class="yt-card">
+    <img style="border-radius: 10px; width: 100%; height: 75%;"
+        src="https://i.ytimg.com/vi/gdvEm_wV4Uw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDAmp_zWobpsiygeKCW8CUXO2BKTQ"
+        alt="" class="card-img">
+    <div class="video-content">
+        <img style="border-radius: 50%; width: 36px; height: 36px;"
+            src="https://yt3.ggpht.com/eO5r30tRFJMGXxMNGPijduVFrl_RkkHUYYjiPejtzBO8BEGeGM6L8f0_LCjZTU9JNW9x6pLWPcE=s68-c-k-c0x00ffffff-no-rj"
+            alt="" class="channel-img">
+        <div class="video-info">
+            <h4>
+                <%= video.videoName %>
+            </h4>
+            <div style="color: #aaa;" class="channel-info">
+                <h5>
+                    <%= video.channelName %>
+                </h5>
+                <h5>
+                    <%= video.view %> görüntülenme • <%= video.publishedDate %>
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const rand = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+    const wait = ms => new Promise(r => setTimeout(r, ms));
+
+    setTimeout(() => {
+        document.querySelectorAll(".yt-card").forEach(async card => {
+            const timeoutDelay = rand(500, 1000);
+            card.style["transition-duration"] = `${timeoutDelay}ms`;
+            await wait(timeoutDelay);
+            card.style.opacity = "1";
+        })
+    })
+
+</script>

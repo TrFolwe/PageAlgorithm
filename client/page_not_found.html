@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        body {
+            background-color: #222;
+            padding: 25px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        img.planet-img {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+        }
+
+        img.planet-img.bottom-left {
+            left: -5%;
+            bottom: -15%;
+        }
+
+        img.planet-img.bottom-right {
+            right: -5%;
+            bottom: -15%;
+        }
+
+        h1,
+        a {
+            text-align: center;
+            display: block;
+            margin: 50px;
+        }
+
+        @media screen and (max-width: 650px) {
+            img.planet-img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>404 Page Not Found</h1>
+    <a style="font-size: 25px;" href="/">Go Home</a>
+    <img src="https://cdn-icons-png.flaticon.com/512/921/921490.png" alt="earth_planet" class="planet-img bottom-left">
+    <img src="https://cdn-icons-png.flaticon.com/512/3594/3594426.png" alt="jupiter_planet"
+        class="planet-img bottom-right">
+</body>
+
+</html>

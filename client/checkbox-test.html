@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Test</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .checkbox-container div {
+            background-color: #222;
+            color: white;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            position: relative;
+            border: 1px solid white;
+        }
+
+        div::before {
+            content: '';
+            position: absolute;
+            width: 7px;
+            height: 100%;
+            background-color: chartreuse;
+            left: 0;
+            top: 0;
+            border-top-left-radius: inherit;
+            border-bottom-left-radius: inherit;
+        }
+
+        input[type="checkbox"] {
+            cursor: pointer;
+        }
+
+        .checkbox-container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            height: 75%;
+            padding: 15px;
+            box-sizing: border-box;
+            background-color: #222;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="checkbox-container">
+        <div>
+            <label for="">Erişim izini</label>
+            <input type="checkbox">
+        </div>
+        <div>
+            <label for="">Erişim izini</label>
+            <input type="checkbox">
+        </div>
+        <div>
+            <label for="">Erişim izini</label>
+            <input type="checkbox">
+        </div>
+        <div>
+            <label for="">Erişim izini</label>
+            <input type="checkbox">
+        </div>
+        <div>
+            <label for="">Erişim izini</label>
+            <input type="checkbox">
+        </div>
+    </div>
+</body>
+
+</html>
